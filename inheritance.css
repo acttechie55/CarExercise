@@ -1,0 +1,59 @@
+
+/*
+#btnCar {
+	background-color: yellow;
+	height: 50px;
+	width:50px;
+	position: absolute;
+}
+#btnCopCar {
+	background-color: purple;
+	height: 50px;
+	width:50px;
+	position: absolute;
+    
+}
+#btnMotorcycle {
+	background-color: lightseagreen;
+	height: 50px;
+	width:50px;
+	position: absolute;
+    top: 110px;
+}
+	
+#btnTank {
+	background-color: darkred;
+	height: 50px;
+	width:50px;
+	position: absolute;
+    top: 160px;
+}
+
+*/
+.Car {
+	background-color: greenyellow;
+	height: 50px;
+	width:50px;
+	position: absolute;
+}
+
+.CopCar {
+	background-color: darkgoldenrod;
+	height: 50px;
+	width:50px;
+	position: absolute;
+}
+
+.Motorcycle {
+	background-color: aqua;
+	height: 50px;
+	width:50px;
+	position: absolute;
+}
+
+.Tank {
+	background-color: darkgrey;
+	height: 200px;
+	width: 200px;
+	position: absolute;
+}
