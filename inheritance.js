@@ -69,19 +69,25 @@ $(document).ready(function() {
    Vehicle.prototype.move = function (direction) {
        this.moveRight();
    }
-   //What is the purpose of .remove//   
+   //
    Vehicle.prototype.remove = function () {
+       
    }
    
    //Telling vehicle to create a div//
    Vehicle.prototype.createVehicle = function(vehicleType) {
+       var posx = Math.floor(Math.random() * 800);
+       var posy = Math.floor(Math.random() * 600);
        this.div = $('<div class="' + vehicleType + '"></div>');
+       this.div.css('top', posy);
+       this.div.css('left', posx);
        $(document.body).append(this.div);
    }
     function Vehicle(vehicleType){
        this.createVehicle('Vehicle');
        this.tolerance = 1;
        this.speed = 2000;
+
    }
    
    //Implementing Car specs//
@@ -90,6 +96,7 @@ $(document).ready(function() {
        this.tolerance = 2;
        this.speed = 1000;
    }
+   
    Car.prototype = Vehicle.prototype;
    
  //Implementing Cop Car specs//  
@@ -100,6 +107,7 @@ $(document).ready(function() {
        this.move = function() {
            this.moveDown();
        }
+    $('.CopCar').fadeTo(1000, 0.5, function() { $('.CopCar').fadeTo(800, 1); });
    }
    CopCar.prototype = Vehicle.prototype;
    
@@ -126,6 +134,14 @@ $(document).ready(function() {
   }
   Tank.prototype = Vehicle.prototype;
 }); 
+//next goals:
+// 1) How do I make the cars recognize when they have hit each other?
+// 2) How do I get the cars to start at different places on the screen,
+// and not just start at the upper right corner?
+// 3) What about my code is making the div go back and forth?
+
+//Links:
+//1) How to make an element go in a circle: http://jsfiddle.net/leaverou/zXPzY/
 
 	
 
